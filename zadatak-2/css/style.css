@@ -1,0 +1,110 @@
+/* || RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/* || GENRERAL STYLES */
+
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+nav {
+    width: 25vw;
+    border-right: 1px solid #000;
+    text-align: center;
+}
+
+ul {
+    padding: 1rem 1rem 0 1rem;
+    list-style-type: none;
+}
+
+li {
+    display: block;
+    border: 1px solid #333;
+    border-radius: 20px;
+    margin: 0.5rem;
+    min-height: 40px;
+    font-size: 2rem
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    text-align: center;
+    margin: 2rem auto 2rem;
+}
+
+main h2 {
+    font-size: 3rem;
+}
+
+main h2::before {
+    content: open-quote;
+}
+
+main h2::after {
+    content: close-quote;
+}
+
+.quote_author {
+    position: relative;
+    left: 7em;
+    font-size: 1.3em;
+}
+
+.quote_author::before {
+    content: "-";
+}
+
+button {
+    margin-top: 2em;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 20px;
+}
+
+a {
+    display: block;
+    border-radius: 20px;
+    min-height: 40px;
+}
+
+li a,
+li a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+li a:hover,
+li a:focus {
+    background: #333;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+li a.active_link {
+    background: #333;
+    color: whitesmoke;
+}
