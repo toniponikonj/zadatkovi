@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="Utf-8">
+    <meta name="author" content="Toni Poni">
+    <meta name="description" content="Zadatak_1 za gospon Savu">
+    <title>register</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="js/validation.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Quotes</a>
+            </li>
+            <li>
+                <a class="active_link" href="page2.html">Form Validation</a>
+            </li>
+            <li>
+                <a href="page3.html">Page 3</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form action="" method="get" class="form_validation" id="form">
+            <p class="form_name">
+                <label class="form_label" for="name">First Name</label>
+                <input class="form_input" type="text" name="name" id="name">
+                <span class="name_error" id="nameError"></span>
+            </p>
+            <p class="form_lastname">
+                <label class="form_label" for="last_name">Last Name</label>
+                <input class="form_input" type="text" name="last_name" id="last_name">
+                <span class="last_name_error" id="lastNameError"></span>
+            </p>
+            <p class="form_p">
+                <label class="form_label" for="email">Email Address</label>
+                <input class="form_input" type="text" name="email" id="email">
+                <span class="email_error" id="emailError"></span>
+            </p>
+            <p class="form_p">
+                <label class="form_label" for="password">Password</label>
+                <input class="form_input" type="password" name="password" id="password">
+                <span class="password_error" id="passwordError"></span>
+            </p>
+            <p class="form_p">
+                <label class="form_label" for="repeat_password">Repeat Password</label>
+                <input class="form_input" type="password" name="repeat_password" id="repeat_password">
+                <span class="repeat_passord_error" id="repeatPasswordError"></span>
+            </p>
+            <button class="register_button" type="submit">Register</button>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -5,19 +5,20 @@
     <meta charset="Utf-8">
     <meta name="author" content="Toni Poni">
     <meta name="description" content="Zadatak_1 za gospon Savu">
-    <title>Page2</title>
+    <title>Quotes</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
     <nav>
         <ul>
             <li>
-                <a href="/">Page 1</a>
+                <a class="active_link" href="/">Quotes</a>
             </li>
             <li>
-                <a class="active_link" href="page2.html">Page 2</a>
+                <a href="page2.html">Form Validation</a>
             </li>
             <li>
                 <a href="page3.html">Page 3</a>
@@ -25,7 +26,11 @@
         </ul>
     </nav>
     <main>
-        <h2>Page2</h2>
+        <h2 id="quote" class="quote"></h2>
+        <p id="author" class="quote_author"></p>
+        <button>
+            <p id="newQuoteBtn">Get a new quote</p>
+        </button>
     </main>
 </body>
 
