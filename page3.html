@@ -5,9 +5,10 @@
     <meta charset="Utf-8">
     <meta name="author" content="Toni Poni">
     <meta name="description" content="Zadatak_1 za gospon Savu">
-    <title>Page3</title>
+    <title>Modals</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="js/multi-step-modal.js" defer></script>
 </head>
 
 <body>
@@ -20,12 +21,32 @@
                 <a href="page2.html">Form Validation</a>
             </li>
             <li>
-                <a class="active_link" href="page3.html">Page 3</a>
+                <a class="active_link" href="page3.html">Modals</a>
             </li>
         </ul>
     </nav>
     <main>
-        <h2>Page3</h2>
+        <button id="openModalBtn">Open Modal</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="step" id="step1">
+                    <p>Step 1</p>
+                    <button class="next">Next</button>
+                </div>
+                <div class="step" id="step2">
+                    <p>Step 2</p>
+                    <button class="previous">Previous</button>
+                    <button class="next">Next</button>
+                </div>
+                <div class="step" id="step3">
+                    <p>Step 3</p>
+                    <button class="previous">Previous</button>
+                    <button class="finish">Finish</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 
