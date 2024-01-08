@@ -5,11 +5,33 @@ function saveTasksToLocalStorage() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+function sortByTime() {
+  tasks.sort((a, b) => new Date(b.date) - new Date(a.date));
+  renderTasks();
+}
+
+function sortByName() {
+  tasks.sort((a, b) => a.text.localeCompare(b.text));
+  renderTasks();
+}
+
 function getTasksFromLocalStorage() {
   const storedTasks = localStorage.getItem("tasks");
   if (storedTasks) {
     tasks = JSON.parse(storedTasks);
+    applySortPreference();
     renderTasks();
+  }
+}
+
+function applySortPreference() {
+  const sortPreference = localStorage.getItem("sortPreference");
+  if (sortPreference === "name") {
+    document.getElementById("sortSelect").value = "name";
+    sortByName();
+  } else {
+    document.getElementById("sortSelect").value = "time";
+    sortByTime();
   }
 }
 
@@ -146,4 +168,16 @@ function closeModal(modal) {
 document.getElementById("taskInput").addEventListener("input", function () {
   const addButton = document.getElementById("addButton");
   addButton.disabled = this.value.trim() === "";
+});
+
+document.getElementById("sortSelect").addEventListener("change", function () {
+  const selectedValue = this.value;
+
+  if (selectedValue === "time") {
+    sortByTime();
+    localStorage.setItem("sortPreference", "time");
+  } else if (selectedValue === "name") {
+    sortByName();
+    localStorage.setItem("sortPreference", "name");
+  }
 });
