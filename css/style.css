@@ -241,7 +241,8 @@ button:disabled {
     cursor: not-allowed;
 }
 
-.delete-btn {
+.delete-btn,
+.edit-btn {
     border: 1px solid black;
     margin: 0;
     padding: 5px;
@@ -249,7 +250,7 @@ button:disabled {
     cursor: pointer;
 }
 
-.task {
+/* .task {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -258,7 +259,7 @@ button:disabled {
     justify-content: space-between;
     align-items: center;
     height: 67px;
-}
+} */
 
 .todo-modal {
     display: none;
@@ -284,4 +285,33 @@ button:disabled {
     float: right;
     cursor: pointer;
     font-size: 2em;
+}
+
+.task {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-text {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.task-date {
+    color: gray;
+    font-size: 14px;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
 }
