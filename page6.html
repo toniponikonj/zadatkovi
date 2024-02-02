@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="Utf-8">
+    <meta name="author" content="Toni Poni">
+    <meta name="description" content="Zadatak_9 za gospon Savu">
+    <title>Private Notes</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/private-notes.css" type="text/css">
+    <script src="js/private-notes.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Quotes</a>
+            </li>
+            <li>
+                <a href="page2.html">Form Validation</a>
+            </li>
+            <li>
+                <a href="page3.html">Modals</a>
+            </li>
+            <li>
+                <a href="page4.html">To-Do</a>
+            </li>
+            <li>
+                <a href="page5.html">Accordion</a>
+            </li>
+            <li>
+                <a class="active_link" href="page6.html">Private Notes</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+
+        <div id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="navbar">
+            <div id="user-name"></div>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div id="notes-container">
+            <div id="main">
+                <form id="create-note-form">
+                    <textarea id="note" rows="4"></textarea>
+                    <button onclick="createNote(event)">Create Note</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
